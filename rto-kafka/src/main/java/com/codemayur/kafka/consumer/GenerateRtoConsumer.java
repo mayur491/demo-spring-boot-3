@@ -39,7 +39,7 @@ public class GenerateRtoConsumer {
     private void consumeReport(GenerateRtoRecord generateRtoRecord) {
         log.info(generateRtoRecord.toString());
 
-        // DB Inserts
+        // DB Reads
         Optional<String> configValue = rtoConfigService.getConfigValue("PRODUCT_TYPES");
         configValue.ifPresent(log::info);
     }

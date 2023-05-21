@@ -33,8 +33,7 @@ public class DeserializerConfig {
     @Bean("generateRtoErrorHandlingJsonDeserializer")
     public Deserializer<GenerateRtoRecord> generateRtoErrorHandlingJsonDeserializer() {
         log.debug("Inside DeserializerConfig::generateRtoErrorHandlingJsonDeserializer");
-        JsonDeserializer<GenerateRtoRecord> deserializer =
-                new JsonDeserializer<>(GenerateRtoRecord.class);
+        JsonDeserializer<GenerateRtoRecord> deserializer = new JsonDeserializer<>(GenerateRtoRecord.class);
         deserializer.setRemoveTypeHeaders(false);
         deserializer.addTrustedPackages("*");
         deserializer.setUseTypeMapperForKey(true);
